@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f0f2f5;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 15px;
+}
+
+.coluna {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.termos {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.termos label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.erro {
+  display: block;
+  color: #c62828;
+  font-size: 13px;
+  min-height: 16px;
+}
+
+.sucesso {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 16px;
+  padding: 10px 20px;
+  background: #1565c0;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0d47a1;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+}

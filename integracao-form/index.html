@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <!-- Coluna 1: formulário -->
+    <section class="coluna">
+      <h2>Cadastro</h2>
+      <form id="cadastroForm" novalidate>
+
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+        <span class="erro" id="erroNome"></span>
+
+        <label for="email">E-mail Institucional</label>
+        <input type="email" id="email" placeholder="exemplo@instituicao.edu.br" required>
+        <span class="erro" id="erroEmail"></span>
+
+        <label for="senha">Senha de Acesso</label>
+        <input type="password" id="senha" placeholder="Mínimo de 6 caracteres" minlength="6" required>
+        <span class="erro" id="erroSenha"></span>
+
+        <label for="confirmaSenha">Confirmação de Senha</label>
+        <input type="password" id="confirmaSenha" placeholder="Repita a senha" required>
+        <span class="erro" id="erroConfirma"></span>
+
+        <label for="perfil">Perfil Técnico</label>
+        <select id="perfil" required>
+          <option value="">Selecione...</option>
+          <option value="Redes">Redes</option>
+          <option value="Desenvolvimento">Desenvolvimento</option>
+          <option value="Suporte">Suporte</option>
+        </select>
+        <span class="erro" id="erroPerfil"></span>
+
+        <div class="termos">
+          <input type="checkbox" id="termos" required>
+          <label for="termos">Li e aceito os Termos de Uso</label>
+        </div>
+        <span class="erro" id="erroTermos"></span>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+
+    <!-- Coluna 2: saída dos dados -->
+    <section class="coluna">
+      <h2>Dados Cadastrados</h2>
+      <p id="mensagemSucesso" class="sucesso"></p>
+      <p><strong>Nome:</strong> <span id="saidaNome">—</span></p>
+      <p><strong>E-mail:</strong> <span id="saidaEmail">—</span></p>
+      <p><strong>Perfil:</strong> <span id="saidaPerfil">—</span></p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
